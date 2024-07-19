@@ -1,8 +1,8 @@
-import { getDocs, collection } from "@firebase/firestore/lite";
+import { getDocs, collection, query, orderBy } from "@firebase/firestore/lite";
 import { db } from "./main";
 
 export async function getArticlesFirestore() {
-    const q = collection(db, "news");
+    const q = query(collection(db, "news"), orderBy("title", "asc")); 
     const querySnapshot = await getDocs(q);
     
     const articles = [];

@@ -1,6 +1,6 @@
-import image from '../assets/news-default.png'
+import React from 'react';
+import image from '../assets/news-default.png';
 
-// Helper function to convert text to title case
 const toTitleCase = (str) => {
   return str.replace(
     /\w\S*/g,
@@ -11,14 +11,13 @@ const toTitleCase = (str) => {
 };
 
 export const NewsItem = ({title, imageSrc, url, source}) => {
-
   const formattedTitle = toTitleCase(title);
 
   return (
     <div className="card bg-transparent border-0 d-inline-block mx-2 my-3" style={{width:"350px"}}>
       <div className="card-header border-secondary d-flex px-0" style={{
         height: '50px',
-        width: '350px',
+        width: '325px',
         padding: '2px 0 0',
         display: 'flex',
         alignItems: 'center',
@@ -42,9 +41,21 @@ export const NewsItem = ({title, imageSrc, url, source}) => {
           {formattedTitle}
         </div>
       </div>
-      <div style={{ position: 'relative' }}>
+      <div style={{ position: 'relative', overflow: 'hidden' }}>
         <a href={url} target="_blank" rel="noopener noreferrer">
-          <img src={imageSrc ? imageSrc : image} className="py-2 card-img-top" style={{height:"230px", width:"350px"}} alt="..."/>
+          <img 
+            src={imageSrc ? imageSrc : image} 
+            className="py-2 card-img-top" 
+            style={{
+              height: "230px", 
+              width: '325px',
+              transition: 'transform 0.3s ease-in-out',
+              borderRadius: '10px'
+            }}
+            onMouseEnter={(e) => e.target.style.transform = 'scale(1.1)'}
+            onMouseLeave={(e) => e.target.style.transform = 'scale(1)'}
+            alt="..."
+          />
         </a>
         <div style={{
           position: 'absolute',

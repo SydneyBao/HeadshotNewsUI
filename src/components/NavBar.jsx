@@ -1,7 +1,7 @@
 export const NavBar = () => {
   return (
     <div>
-      <nav className="navbar px-2 py-3 text-light" style={{ position: 'fixed', zIndex: '3' }}>
+      <nav className="navbar px-2 py-3 text-light no-select" style={{ position: 'fixed', zIndex: '3' }}>
         <div style={{ position: 'relative' }}>
           <h2 style={{ textShadow: '#DC4C64 1px 0 10px', fontFamily: 'Montserrat' }}>
             <span className="badge fs-4" style={{ 
