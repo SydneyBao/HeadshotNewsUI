@@ -1,2 +1,2 @@
-Find the Completed Website at [Headshot News](https://headshotnews.cpm)!
+Find the Completed Website at [Headshot News](https://headshotnews.com)!
 
