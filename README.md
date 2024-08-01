@@ -1,2 +1,1 @@
-Find the Completed Website at [Headshot News](https://headshotnews.com)!
-
+This user interface uses Bootstrap and React to display articles from popular Esports Counter-Strike websites--including counter-strike.net, dust2.us, and hltv.org--stored in the Firestore Database. The back-end code can be found in the HeadshotNews repository. Find the completed website at [Headshot News](http://headshotnews.com/)!
